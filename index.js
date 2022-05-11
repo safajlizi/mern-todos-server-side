@@ -22,7 +22,7 @@ app.get("/",(req,res)=>{
 })
 
 
-mongoose.connect(process.env.mongodb,{useUnifiedTopology:true,useNewUrlParser:true}).then(()=>{
+mongoose.connect(mongodb,{useUnifiedTopology:true,useNewUrlParser:true}).then(()=>{
     app.listen(PORT,()=>console.log(`server is running on port ${PORT}`))
     })
     .catch((err)=>console.log(err))
